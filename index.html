@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>KINGS LEAGUE IMEX — Plataforma Oficial del Torneo</title>
+  <meta name="description" content="Plataforma web oficial del torneo escolar de fútbol 7 KINGS LEAGUE IMEX. Partidos, clasificación, mercado de transferencias, clausulazos, cartas secretas y calendario." />
+  <meta name="theme-color" content="#080A0F" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Kings IMEX" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/kings-imex.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- Google Fonts: Space Grotesk, Bebas Neue, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Estilos Modulares -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/views.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Contenedor SPA Principal -->
+  <div id="app">
+    <!-- Sidebar Navegación Lateral en Desktop -->
+    <aside class="app-sidebar" id="appSidebar" aria-label="Navegación Lateral"></aside>
+
+    <!-- Wrapper Principal de Contenido -->
+    <div class="app-main">
+      <!-- Header Superior Fijo -->
+      <header class="app-header" id="appHeader" role="banner"></header>
+
+      <!-- Viewport Central Dinámico -->
+      <main class="app-view-container" id="appViewContainer" role="main"></main>
+
+      <!-- Barra de Navegación Inferior en Móviles -->
+      <nav class="mobile-bottom-nav" id="appBottomNav" aria-label="Navegación Móvil"></nav>
+    </div>
+  </div>
+
+  <!-- Contenedor para Toasts (el modal lo crea modal.js dinámicamente) -->
+  <div id="globalToastContainer" class="toast-container"></div>
+
+  <!-- Script Modular SPA -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

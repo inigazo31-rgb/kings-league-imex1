@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: kings-league-imex
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: SUPABASE_URL
+        value: https://ueivjiimojvxxykflpbh.supabase.co
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: IMEX_PASSWORD_ORGANIZADOR
+        sync: false
+      - key: IMEX_PASSWORD_CUERVOS_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_TITANES_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_RAYO_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_FURIA_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_GALACTICOS_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_VIKINGOS_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_DRAGONES_PRESI
+        sync: false
+      - key: IMEX_PASSWORD_HALCONES_PRESI
+        sync: false
